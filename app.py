@@ -40,12 +40,12 @@ def load_model(model_name):
     if model_name == "ViT-B/16 (torchvision)":
         model = vit_b_16(pretrained=False)
         model.heads.head = nn.Linear(model.heads.head.in_features, num_classes)
-        model_path = hf_hub_download(repo_id="your-username/chili-detection-models", filename="vit_b16_feature_extraction.pth")
+        model_path = hf_hub_download(repo_id="Roshni231123/Chili_detection_model", filename="vit_b16_feature_extraction.pth")
         model.load_state_dict(torch.load(model_path, map_location="cpu"))
     elif model_name == "ConViT (timm)":
         model = create_model("convit_base", pretrained=False)
         model.head = nn.Linear(model.head.in_features, num_classes)
-        model_path = hf_hub_download(repo_id="your-username/chili-detection-models", filename="Convit_base.pth")
+        model_path = hf_hub_download(repo_id="Roshni231123/Chili_detection_model", filename="Convit_base.pth")
         model.load_state_dict(torch.load(model_path, map_location="cpu"))
     else:
         raise ValueError("Unsupported model selected")
