@@ -1,3 +1,6 @@
+Go to the website: https://chili-disease-detection-system-4e7nhwgappvctdzaodnnbna.streamlit.app/
+
+
 # Chili-disease-detection-system
 
 This project aims to detect diseases in chili plant leaves using advanced Vision Transformer (ViT) models. It classifies images into three categories: **Aphids**, **MitesThrips**, and **Healthy**, and provides remedies for detected diseases. The solution is deployed as a simple and interactive **Streamlit web app**.
